@@ -1,6 +1,10 @@
-# Text-Speach: AI-Powered Speech-to-Text App
+# 🎤 Text-Speach: AI-Powered Speech-to-Text App
 
-This project converts audio files into text using OpenAI's Whisper model, powered by a FastAPI backend and a React + TypeScript frontend styled with Tailwind CSS.
+![FastAPI](https://img.shields.io/badge/backend-FastAPI-green)
+![React](https://img.shields.io/badge/frontend-React-blue)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+Convert speech to text using OpenAI Whisper with a beautiful modern frontend built using React, TypeScript, and Tailwind CSS.
 
 ---
 
@@ -9,17 +13,17 @@ This project converts audio files into text using OpenAI's Whisper model, powere
 ```
 Text-Speach/
 ├── backend/
-│   ├── venv/                  # Virtual environment
-│   ├── main.py                # FastAPI application
-│   ├── whisper_model.py       # Whisper transcription logic
-│   ├── requirements.txt       # Backend dependencies
-│   └── static/                # (Optional) Frontend build for production
+│   ├── venv/
+│   ├── main.py
+│   ├── whisper_model.py
+│   ├── requirements.txt
+│   └── static/                # built frontend goes here
 ├── frontend/
-│   ├── public/                # Static assets
+│   ├── public/
 │   ├── src/
-│   │   ├── components/        # React components
-│   │   ├── hooks/             # Custom React hooks
-│   │   ├── types/             # Type definitions
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── types/
 │   │   ├── App.tsx
 │   │   ├── main.tsx
 │   │   ├── index.css
@@ -32,87 +36,93 @@ Text-Speach/
 
 ## 🔧 Backend Setup
 
-1. **Navigate & Setup venv:**
-   ```bash
-   cd backend
-   python -m venv venv
-   .\venv\Scripts\activate  # For Windows
-   ```
+1. Create and activate virtual environment:
 
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+cd backend
+python -m venv venv
+./venv/Scripts/activate  # On Windows
+```
 
-3. **Start the server:**
-   ```bash
-   uvicorn main:app --reload
-   ```
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Start backend:
+
+```bash
+uvicorn main:app --reload
+```
+
+Access: [http://localhost:8000](http://localhost:8000)
 
 ---
 
 ## 🔧 Frontend Setup
 
-1. **Create app with Vite + React + TypeScript:**
-   ```bash
-   npm create vite@latest frontend -- --template react-ts
-   ```
+1. Install dependencies:
 
-2. **Install dependencies:**
-   ```bash
-   cd frontend
-   npm install
-   npm install -D tailwindcss@3.4.17 postcss@8.5.4 autoprefixer @tailwindcss/forms @tailwindcss/typography
-   npx tailwindcss init -p
-   ```
+```bash
+cd frontend
+npm install
+npm install -D tailwindcss postcss autoprefixer @tailwindcss/forms @tailwindcss/typography
+npx tailwindcss init -p
+```
 
-3. **Start frontend dev server:**
-   ```bash
-   npm run dev
-   ```
+2. Start frontend dev server:
+
+```bash
+npm run dev
+```
+
+Access: [http://localhost:5173](http://localhost:5173)
 
 ---
 
 ## 🧠 Features
 
-- Audio upload via drag & drop or click
-- Language input and model size selection
-- Real-time transcription display with segment breakdown
-- View transcription history
-- Copy transcript to clipboard
+- Audio upload (drag/drop or file picker)
+- Whisper model language + size options
+- Live transcription with segments
+- Copy transcription
+- History of transcribed audio
 
 ---
 
-## 🛠 Tech Stack
+## ✅ Health Check
 
-- **Backend:** FastAPI, Whisper, Python
-- **Frontend:** React, TypeScript, Tailwind CSS, Vite
-- **Other:** Axios, UUID, CORS
-
----
-
-## 🏁 Deployment Tips
-
-- Build frontend:
-  ```bash
-  npm run build
-  ```
-
-- Copy frontend `dist/` to backend `static/`:
-  ```bash
-  cp -r dist ../backend/static
-  ```
-
-- Use production server like Gunicorn or serve via Nginx
-
----
-
-## ✅ Health Check Endpoint
-
-Visit:
+```http
+GET http://localhost:8000/health/
 ```
-http://localhost:8000/health/
+
+Returns server status and timestamp.
+
+---
+
+## 📷 Screenshot
+
+![image](https://github.com/user-attachments/assets/e0df141a-4237-492b-9f0c-1ceaf94775b5)
+
+---
+
+## 🚀 Deployment
+
+1. Build frontend:
+
+```bash
+cd frontend
+npm run build
 ```
+
+2. Copy `dist/` to backend static:
+
+```bash
+cp -r dist ../backend/static
+```
+
+3. Serve using Gunicorn, Nginx, or similar.
 
 ---
 
@@ -120,4 +130,6 @@ http://localhost:8000/health/
 
 - [OpenAI Whisper](https://github.com/openai/whisper)
 - [FastAPI](https://fastapi.tiangolo.com/)
-- [Vite + Tailwind + React](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)

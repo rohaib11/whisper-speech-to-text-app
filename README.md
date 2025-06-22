@@ -62,7 +62,7 @@ Text-Speach/
    ```bash
    cd frontend
    npm install
-   npm install -D tailwindcss postcss autoprefixer @tailwindcss/forms @tailwindcss/typography
+   npm install -D tailwindcss@3.4.17 postcss@8.5.4 autoprefixer @tailwindcss/forms @tailwindcss/typography
    npx tailwindcss init -p
    ```
 

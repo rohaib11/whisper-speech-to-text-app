@@ -6,6 +6,10 @@
 
 Convert speech to text using OpenAI Whisper with a beautiful modern frontend built using React, TypeScript, and Tailwind CSS.
 
+## 📷 Screenshot
+
+![image](https://github.com/user-attachments/assets/e0df141a-4237-492b-9f0c-1ceaf94775b5)
+
 ---
 
 ## 📁 Folder Structure
@@ -101,9 +105,7 @@ Returns server status and timestamp.
 
 ---
 
-## 📷 Screenshot
 
-![image](https://github.com/user-attachments/assets/e0df141a-4237-492b-9f0c-1ceaf94775b5)
 
 ---
 
